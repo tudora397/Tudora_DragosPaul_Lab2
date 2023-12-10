@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tudora_Dragos_Lab2.Data;
 
@@ -11,9 +12,10 @@ using Tudora_Dragos_Lab2.Data;
 namespace Tudora_Dragos_Lab2.Migrations
 {
     [DbContext(typeof(Tudora_Dragos_Lab2Context))]
-    partial class Tudora_Dragos_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20231210111111_Borrowings")]
+    partial class Borrowings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

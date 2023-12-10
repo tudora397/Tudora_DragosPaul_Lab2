@@ -19,5 +19,16 @@ namespace Tudora_Dragos_Lab2.Data
         public DbSet<Tudora_Dragos_Lab2.Models.Publisher>? Publisher { get; set; }
 
         public DbSet<Tudora_Dragos_Lab2.Models.Author>? Author { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Book>()
+                .HasOne(b => b.Borrowing)
+                .WithOne(b => b.Book)
+                .HasForeignKey<Borrowing>(b => b.BookID);
+
+            // Add other configurations as needed
+        }
+        public DbSet<Tudora_Dragos_Lab2.Models.Member>? Member { get; set; }
+        public DbSet<Tudora_Dragos_Lab2.Models.Borrowing>? Borrowing { get; set; }
     }
 }
