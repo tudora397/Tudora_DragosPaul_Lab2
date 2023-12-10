@@ -8,7 +8,7 @@ namespace Tudora_Dragos_Lab2.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        [Display(Name = "AuthorName")]
+        [Display(Name = "FullName")]
         public string AuthorName
         {
             get
